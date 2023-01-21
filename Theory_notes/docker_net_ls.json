@@ -1,0 +1,19 @@
+{"MacAddress": "02:42:ac:11:00:03",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "568a6474cb324c90ed04c64a65689fd21fb3433a06fc629ec77c74b6b07a6987",
+                    "EndpointID": "4a9d58f0ee97aba548556f284cf5405f818d314f67955d375266378b182203d7",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:03",
+                    "DriverOpts": null
+                }
+                }
+                }
