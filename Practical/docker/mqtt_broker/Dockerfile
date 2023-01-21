@@ -12,4 +12,3 @@ RUN apt install mosquitto -y
 RUN cp /myapp/mqttbroker/port.conf /etc/mosquitto/conf.d/
 
 RUN service mosquitto restart
-
