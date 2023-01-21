@@ -9,6 +9,8 @@ RUN apt update -y
 
 RUN apt install mosquitto -y
 
+RUN apt install net-tools -y
+
 RUN cp /myapp/mqttbroker/port.conf /etc/mosquitto/conf.d/
 
 RUN service mosquitto restart
