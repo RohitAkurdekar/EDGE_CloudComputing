@@ -19,7 +19,7 @@ def on_connect(client, userData, flags, responseCode):
 
 # Callback method to print recieved message
 def on_message(client,userData, msg):
-    my_data= {  "data":msg    }
+    my_data= {  "data":msg.payload    }
     DB.send_data((my_data))
     print('Topic: ' + msg.topic + ' Message: ' + str(msg.payload))
 

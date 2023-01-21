@@ -1,6 +1,6 @@
 # Python code to illustrate
 # inserting data in MongoDB
-import json
+import json as JSON
 from pymongo import MongoClient
   
 try:
@@ -18,7 +18,9 @@ collection = db.my_gfg_collection
 
 # Insert Data
 def send_data(data):
-    collection.insert_one(json.parse(data))
+    # print(data)
+    collection.insert_one(data)
+    
     print("Data inserted successfully...!!!")
   
 # Printing the data inserted
