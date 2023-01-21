@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import paho.mqtt.client as mqtt
+import MongoPy as DB
 
 # To subscribe
 subscriber = mqtt.Client()
@@ -18,6 +19,8 @@ def on_connect(client, userData, flags, responseCode):
 
 # Callback method to print recieved message
 def on_message(client,userData, msg):
+    my_data= {  "data":msg    }
+    DB.send_data(my_data)
     print('Topic: ' + msg.topic + ' Message: ' + str(msg.payload))
 
 

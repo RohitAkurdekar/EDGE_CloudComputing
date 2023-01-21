@@ -3,6 +3,7 @@
 from pymongo import MongoClient
   
 try:
+    # Change IP address according to your DB IP.
     conn = MongoClient("192.168.77.205")
     print("Connected successfully!!!")
 except:  
