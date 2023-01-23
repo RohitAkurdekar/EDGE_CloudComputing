@@ -119,7 +119,11 @@ root@2079e466f72d:/# curl http://< container_IP_Address>
 
 ----------------------------------------------------------------------------
 
-        docker rm $DOCKER docker ps -a -q
+        docker stop $(docker ps -a -q)
+
+        docker start $(docker ps -a -q)
+
+        git --hard reset HEAD^
 
 ----------------------------------------------------------------------
 
