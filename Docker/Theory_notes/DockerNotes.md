@@ -119,7 +119,7 @@ root@2079e466f72d:/# curl http://< container_IP_Address>
 
 ----------------------------------------------------------------------------
 
-        docker stop $(docker ps -a -q)
+        docker stop $(docker ps -q)
 
         docker start $(docker ps -a -q)
 
