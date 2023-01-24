@@ -32,5 +32,16 @@
     root@diot:/var/lib/docker/volumes/volume_demo/_data# nano hello.txt 
     root@diot:/var/lib/docker/volumes/volume_demo/_data# 
 
+--------------------------------------------------------------------------------------------
+
+    root@diot:~# cp /home/diot/Documents/Rohit/EDGE_Cloud/Docker/Theory_notes/volumes.md /var/lib/docker/volumes/volume_demo/_data/
+    root@diot:~# 
+
+--------------------------------------------------------------------------------------------
+
+    root@0c33dd86dfd6:/diot/data# ls
+    hello.txt  volumes.md
+
+
 ---------------------------------------------------------------------------------------------------
 2023, Rohit Akurdekar
