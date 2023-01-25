@@ -7,7 +7,7 @@ import paho.mqtt.publish as publisher
 TOPIC       = 'cdac/diot'
 BROKER_ADDR = "192.168.77.205"
 PORT        = 1883
-KEEP_ALIVE  = 60
+KEEP_ALIVE  = 60 
 
 # Callback method for successful connection
 def on_connect(client, userData, flags, responseCode):
