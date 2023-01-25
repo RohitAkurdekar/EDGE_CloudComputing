@@ -2,4 +2,6 @@ version: '3.8'
 services:
   pythonapp:
     build: .
+    tty: true
+    stdin_open: true
     command: python3 user_driven_input.py

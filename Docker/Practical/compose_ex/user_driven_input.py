@@ -20,3 +20,17 @@ def my_handler():
 
 # calling main handler
 my_handler()
+
+""" ------------ OUTPUT ---------------------------
+
+diot@diot:~/$ docker compose up -d
+
+[+] Running 1/1
+ ⠿ Container compose_ex-pythonapp-1  Started                                                                         2.2s
+
+diot@diot:~/$ docker compose run pythonapp 
+Enter num1: 65
+Enter num2: 12
+65+12=77 
+
+"""
