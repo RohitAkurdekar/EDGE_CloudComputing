@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  mqttbroker:
+    build: ./MQTT_broker
+    # image: ubuntu:mqtt_brokerV1
+    hostname: mosquitto_broker_c
+    container_name: mqc_broker
+    networks:
+      - default 
+    expose:
+      - 1883
+    ports:
+      - 6800:1883
+  mqttpub:
+    build: ./MQTT_PUB
+    hostname: mosquitto_pub_c
+    container_name: mqc_pub
+    networks:
+      - default 
+    command:  python3 publisher.py
+  mqttsub:
+    build: ./MQTT_SUB
+    hostname: mosquitto_sub_c
+    container_name: mqc_sub
+    networks:
+      - default 
+    command:  python3 subscriber.py
+
