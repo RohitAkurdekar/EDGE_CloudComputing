@@ -6,7 +6,7 @@ import paho.mqtt.publish as publisher
 # CONSTANTS
 TOPIC       = 'cdac/diot'
 BROKER_ADDR = "mqttbroker"
-PORT        = 1883
+PORT        = 6800
 KEEP_ALIVE  = 60 
 
 # Callback method for successful connection
@@ -17,12 +17,13 @@ def on_connect(client, userData, flags, responseCode):
 
 # Defining callback methods in MQTT  Client
 publisher.on_connect = on_connect
-
-
-# Send single publish request to broker
-publisher.single(topic=TOPIC,
-                 payload="This is python publisher",
-                 hostname=BROKER_ADDR,
-                 port=PORT,
-                 qos=2,
-                 keepalive=KEEP_ALIVE)
+i =0
+while True:
+    i+=1
+    # Send single publish request to broker
+    publisher.single(topic=TOPIC,
+                    payload=i,
+                    hostname=BROKER_ADDR,
+                    port=PORT,
+                    qos=2,
+                    keepalive=KEEP_ALIVE)

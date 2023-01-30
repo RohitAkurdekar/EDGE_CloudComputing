@@ -8,7 +8,7 @@ subscriber = mqtt.Client()
 # CONSTANTS
 TOPIC       = 'cdac/diot'
 BROKER_ADDR = "mqttbroker"
-PORT        = 1883
+PORT        = 6800
 KEEP_ALIVE  = 60
 
 # Callback method for successful connection
