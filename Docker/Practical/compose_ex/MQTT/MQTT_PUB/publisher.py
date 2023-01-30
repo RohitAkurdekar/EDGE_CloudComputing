@@ -5,7 +5,7 @@ import paho.mqtt.publish as publisher
 
 # CONSTANTS
 TOPIC       = 'cdac/diot'
-BROKER_ADDR = "192.168.77.205"
+BROKER_ADDR = "mqttbroker"
 PORT        = 1883
 KEEP_ALIVE  = 60 
 
