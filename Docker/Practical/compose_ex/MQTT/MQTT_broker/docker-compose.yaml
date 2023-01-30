@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  mqttbroker:
+    # build: .
+    image: ubuntu:mqtt_brokerV1
+    hostname: mosquitto_broker_c
+    container_name: mqc_broker
+    networks:
+      - default 
+    expose:
+      - 1883
+    ports:
+      - 6800:1883
+    
