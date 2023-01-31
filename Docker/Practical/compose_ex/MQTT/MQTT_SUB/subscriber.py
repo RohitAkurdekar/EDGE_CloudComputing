@@ -6,7 +6,7 @@ import paho.mqtt.client as mqtt
 subscriber = mqtt.Client()
 
 # CONSTANTS
-TOPIC       = 'cdac/diot'
+TOPIC       = 'akurdekar/rohit'
 BROKER_ADDR = "mqttbroker"
 PORT        = 6800
 KEEP_ALIVE  = 60

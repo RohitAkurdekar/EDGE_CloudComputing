@@ -7,9 +7,9 @@ import paho.mqtt.publish as publisher
 import random
 
 # CONSTANTS
-TOPIC       = 'd/cdac/telementry'
-BROKER_ADDR = "broker.hivemq.com"
-PORT        = 1883
+TOPIC       = 'akurdekar/rohit'
+BROKER_ADDR = "mqttbroker"
+PORT        = 6800
 KEEP_ALIVE  = 60
 
 # variables
