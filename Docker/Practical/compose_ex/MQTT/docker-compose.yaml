@@ -18,6 +18,8 @@ services:
     networks:
       - default 
     command:  python3 publisher.py
+    depends_on:
+      - mqttbroker
   mqttsub:
     build: ./MQTT_SUB
     hostname: mosquitto_sub_c
@@ -25,4 +27,6 @@ services:
     networks:
       - default 
     command:  python3 subscriber.py
+    depends_on:
+      - mqttbroker
 

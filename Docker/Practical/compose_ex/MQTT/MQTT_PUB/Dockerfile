@@ -9,4 +9,4 @@ ADD . /app/mqttapp/
 
 RUN pip install paho-mqtt
 
-CMD ["python","publisher.py"]
+# CMD ["python3","publisher.py"]
