@@ -30,3 +30,13 @@ services:
     depends_on:
       - mqttbroker
 
+  mqttrest:
+    build: ./REST_thingspeak
+    hostname: mosquitto_rest_c
+    container_name: mqc_rest
+    networks:
+      - default 
+    command:  python3 REST_API.py
+    depends_on:
+      - mqttbroker
+

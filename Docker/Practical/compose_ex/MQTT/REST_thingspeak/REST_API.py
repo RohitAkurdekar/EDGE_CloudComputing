@@ -1,7 +1,23 @@
 #!/usr/bin/python3
 
+# Program to perform simple GET request to HTTP server
+import requests
+import json
+
 import paho.mqtt.client as mqtt
 
+
+HOST = "https://api.thingspeak.com/update.json"
+
+REQUEST_BODY = {
+    "api_key"   : "J76GYFXE11UWQ68N",    # API key 
+    "field1"    : "Rohit Akurdekar",      # Patient name
+    "field2"    : 80,                     # O2 saturation
+    "field3"    : 75,                     # step count
+    "field4"    : 8,                      # sleep hours
+
+}
+# -----------------------------------------------------------
 # To subscribe
 subscriber = mqtt.Client()
 
@@ -20,6 +36,10 @@ def on_connect(client, userData, flags, responseCode):
 def on_message(client,userData, msg):
     # my_data= {  "data":msg.payload    }
     print('Topic: ' + msg.topic + ' Message: ' + str(msg.payload))
+    REQUEST_BODY = msg.payload  
+    response = requests.post(HOST , REQUEST_BODY)
+
+    print(response.json())
 
 
 # Defining callback methods in MQTT  Client
@@ -31,3 +51,5 @@ subscriber.connect(host=BROKER_ADDR,port=PORT,keepalive=KEEP_ALIVE)
 
 # To maintain the connection
 subscriber.loop_forever()
+
+# --------------------------------------------------------
