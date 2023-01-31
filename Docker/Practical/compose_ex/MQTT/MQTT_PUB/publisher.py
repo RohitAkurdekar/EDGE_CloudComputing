@@ -15,10 +15,11 @@ KEEP_ALIVE  = 60
 # variables
 # Dummy device data
 data = {
-    "temperature"   : random.randint(1,31),
-    "Humidity"      : random.randint(60,91),
-    "pressure"      : random.randint(450,601),
-    "location"      : "DIoT classrooom"
+    "api_key" : "J76GYFXE11UWQ68N",     # API key 
+    "field1"  : "Rohit Akurdekar",      # Patient name
+    "field2"  : 80,                     # O2 saturation
+    "field3"  : 75,                     # step count
+    "field4"  : 8,                      # sleep hours
 
 }
 
@@ -46,10 +47,11 @@ while True:
 
     # Generate a random data using dummy device
     data = {
-        "temperature"   : random.randint(1,31),
-        "Humidity"      : random.randint(60,91),
-        "pressure"      : random.randint(450,601),
-        "location"      : "DIoT classrooom"
+        "api_key"   : "J76GYFXE11UWQ68N",  
+        "field1"    : "Rohit Akurdekar",   
+        "field2"    : random.randint(1,31),
+        "field3"    : random.randint(60,91),
+        "field4"    : random.randint(450,601),
     }
 
 
