@@ -20,9 +20,10 @@ publisher.on_connect = on_connect
 i =0
 while True:
     i+=1
+    data = "num: "+i
     # Send single publish request to broker
     publisher.single(topic=TOPIC,
-                    payload=i,
+                    payload=data,
                     hostname=BROKER_ADDR,
                     port=PORT,
                     qos=2,
