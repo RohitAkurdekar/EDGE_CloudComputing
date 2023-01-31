@@ -8,7 +8,7 @@ subscriber = mqtt.Client()
 # CONSTANTS
 TOPIC       = 'akurdekar/rohit'
 BROKER_ADDR = "mqttbroker"
-PORT        = 6800
+PORT        = 1883
 KEEP_ALIVE  = 60
 
 # Callback method for successful connection

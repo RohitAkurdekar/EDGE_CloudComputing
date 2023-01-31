@@ -9,7 +9,7 @@ import random
 # CONSTANTS
 TOPIC       = 'akurdekar/rohit'
 BROKER_ADDR = "mqttbroker"
-PORT        = 6800
+PORT        = 1883
 KEEP_ALIVE  = 60
 
 # variables
