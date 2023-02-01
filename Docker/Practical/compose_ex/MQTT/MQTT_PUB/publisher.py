@@ -43,7 +43,7 @@ while True:
                     keepalive=KEEP_ALIVE)
 
     print("meassage: "+json.dumps(data))
-    sleep(5)            # Wait for 5 seconds
+    sleep(16)            # Wait for 5 seconds
 
     # Generate a random data using dummy device
     data = {
