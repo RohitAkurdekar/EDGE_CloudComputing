@@ -1,5 +1,6 @@
 version: '3.3'
 services:
+# -------- MQTTbroker --------------------
   mqttbroker:
     build: ./MQTT_broker
     # image: ubuntu:mqtt_brokerV1
@@ -11,6 +12,8 @@ services:
       - 1883
     ports:
       - 6800:1883
+
+# -------- MQTTpublisher --------------------
   mqttpub:
     build: ./MQTT_PUB
     hostname: mosquitto_pub_c
@@ -20,6 +23,8 @@ services:
     command:  python3 publisher.py
     depends_on:
       - mqttbroker
+
+# -------- MQTTsubscriber --------------------
   mqttsub:
     build: ./MQTT_SUB
     hostname: mosquitto_sub_c
@@ -30,6 +35,7 @@ services:
     depends_on:
       - mqttbroker
 
+# -------- MQTT_REST_POST --------------------
   mqttrest:
     build: ./REST_thingspeak
     hostname: mosquitto_rest_c

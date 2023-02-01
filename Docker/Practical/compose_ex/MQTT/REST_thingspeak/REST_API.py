@@ -10,11 +10,11 @@ import paho.mqtt.client as mqtt
 HOST = "https://api.thingspeak.com/update.json"
 
 REQUEST_BODY = {
-    "api_key"   : "J76GYFXE11UWQ68N",    # API key 
-    "field1"    : "Rohit Akurdekar",      # Patient name
-    "field2"    : 80,                     # O2 saturation
-    "field3"    : 75,                     # step count
-    "field4"    : 8,                      # sleep hours
+    "api_key"   : "J76GYFXE11UWQ68N",       # API key 
+    "field1"    : "Rohit Akurdekar",        # Patient name
+    "field2"    : 80,                       # O2 saturation
+    "field3"    : 75,                       # step count
+    "field4"    : 8,                        # sleep hours
 
 }
 # -----------------------------------------------------------
